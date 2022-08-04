@@ -1,0 +1,30 @@
+<section class="formAddCalendarItem grid">
+    <span class="choiceDate  grid">Выбери дату</span>
+<span class="formateddate grid"></span>
+    {{!-- <article class="formAddCalendarItem__selectbtn">Выбери дату</article>
+    <article class="formAddCalendarItem__date"></article> --}}
+    <select class="formAddCalendarItem__type">
+        {{#each listTypeDays}}
+        <option value={{_id}}>{{nameTypeDay}}</option>
+        {{/each}}
+    </select>
+    <article class="form__btn formAddCalendarItem__addbtn">Добавить в календарь</article> 
+</section>
+<section class="listCalendar grid">
+<h1>Календарь</h1>
+{{#each listCalendarItem}}
+<section class="listCalendar__item grid">
+    <section class="listCalendar__item-opisanie">{{formatedDate dateDay}} -{{typeDay.nameTypeDay}} </section><input type="hidden" value={{_id}} >
+    <section class="listCalendar__item-menudel">
+    <div class="del__confirm grid ">
+              <span class="del__confirm-text" >Уверен?</span>
+               <div class="del__confirm-btns grid"><span class="del__confirm-btn delcalendaritem">Да</span><span class="del__confirm-btn nodelcalendaritem">Нет</span></div> 
+            </div>
+            <input type="hidden" class="idnews" value={{_id}}>
+    </section>
+</section>
+        
+        {{/each}}
+
+</section>
+

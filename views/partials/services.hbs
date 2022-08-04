@@ -1,0 +1,20 @@
+
+<section class="list-category-to grid">
+{{#each to}}
+
+    <section class="list-category-to-item grid">
+        <div class="list-category-to-item__img  list-category-to-item__img-{{categoryName}} grid"></div>
+        <div class="list-category-to-item__about">
+            <span class="list-category-to-item__about-name">{{categoryName}}</span> 
+            <span class="list-category-to-item__about-detail">({{categoryDetail}})</span>
+        </div>
+        <div class="list-category-to-item__price">{{categoryPrice}}</div>
+
+
+    </section>
+
+
+
+
+{{/each}}
+</section>

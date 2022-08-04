@@ -1,0 +1,25 @@
+<section class="registration-form grid">
+<div class="registration-form__fio-car grid">
+    <input type="text" class="input input__fio" placeholder="Ваше имя *">
+    <input type="text" class="input input__car" placeholder="О транспортном средстве(например: лада-гранта год выпуска 2015)">
+</div>
+<div class="registration-form__choice-date grid">
+    <span class="choiceDate grid">Выбери дату</span>
+    <span class="formateddate grid"></span>
+</div>
+<div class="registration-form__choice-time grid">
+    {{!-- {{#each grafInspection}}
+    <span class="registration-form__choice-time-item ">{{.}}</span>
+    {{/each}} --}}
+    </div>
+{{!-- <div class="registration-form__feedback grid">
+    <input type="text" class="input input__e-mail" placeholder="Ваш e-mail" >
+    <input type="text" class="input input__tel" placeholder="Ваш телефон" >
+</div> --}}
+<span class="zapis registration-form__button registration-form__button_disable">Записаться</span>
+ {{!-- Сюда сохраняем id выбранного времени  --}}
+<input type="hidden" class="id-time-registration">
+{{!-- Сюда сохраняем выбранную дату --}}
+<input type="hidden" class="date-registration"> 
+</section>
+

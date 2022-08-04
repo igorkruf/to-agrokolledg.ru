@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta name="viewport" content="width=device-width,initial-scale=1.0">
+		<title>{{title}}</title>
+		<link rel="icon" href="favicon.ico" type="image/x-icon">
+       <link rel="stylesheet" type="text/css" href="/style/style.css"/>
+	   {{!-- для форматирования даты --}}
+	   <script src="/scripts/luxon.min.js"></script>
+       <script src="/scripts/script.js"></script>
+	   {{!-- для datepicker --}}
+	   <link rel="stylesheet" type="text/css" href="/datepicker/datepicker.min.css"/>
+       <script src="/datepicker/datepicker.min.js"></script>
+	   
+	</head>
+	<body class="grid">
+		<header class="header grid">
+             {{!-- {{>header/img}} --}}
+		</header>
+		<main class="main grid">
+			{{{body}}}
+		</main>
+		{{!-- <footer class="footer">
+			<h1>Подвал сайта</h1>
+		</footer>--}}
+		<section class="tooltip">
+			Подсказка
+		</section>
+		{{!--
+		<nav class="navmenu">
+			<h4>Меню сайта</h4>
+			
+		</nav> --}}
+		{{!-- модальное окно объявления --}}
+		<section class="wrapmodal grid ">
+<section class="modal grid">
+	<span id="closenews" class="modal__close"></span>
+	
+	
+	</section>
+	</section>
+	{{!-- модальное окно регистрации(предварительной записи)
+	<section class="wrapmodal-registration grid ">
+<section class="modal grid">
+	<span id="closenews" class="modal__close"></span>
+	
+	
+	</section>
+	</section> --}}
+	{{!-- <section class="content__inspectioninstrahovaya">
+    <img src="img/strahovaya.png" alt="" class="strahovaya_logo">
+  </section> --}}
+  <section class="footer grid">
+      <a href="http://chivic.ru">Разработка сайтов - chivic.ru</a>
+  </section>
+	</body>
+</html>

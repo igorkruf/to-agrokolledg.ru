@@ -1,0 +1,35 @@
+<section class="razdelRegRab">
+<h1>Режим работы</h1>
+<section class="grafInspection grid">
+   {{#each grafInspection}}
+   <span><b>{{@index}}</b>: {{.}}</span>
+   {{/each}}
+</section>
+<section class="listRegRab grid">
+{{#each listTypeDays}}
+<section class="listregtype grid">
+<nav class="listregtype__item-menu grid">
+    <div class="save"><input type="hidden" class="idregtype " value={{_id}}></div>
+        <div class="edit"><input type="hidden" class="idregtype" value={{_id}}> </div>
+        <div class="del">
+             
+            <div class="del__confirm grid">
+              <span class="del__confirm-text" >Уверен?</span>
+               <div class="del__confirm-btns grid"><span class="del__confirm-btn delregtype">Да</span><span class="del__confirm-btn ">Нет</span></div> 
+            </div>
+            <input type="hidden" class="idregtype" value={{_id}}>
+        </div>
+    </nav>
+<span>{{nameTypeDay}}</span>
+<input type="text" class="form__input form__input-disable"  value={{regTypeDay}} >
+</section>
+{{/each}}
+
+</section>
+<h1>Добавление режима работы</h1>
+<section class="form grid">
+<input type="text" class="form__input nametype" placeholder="Название режима">
+<input type="text" class="form__input regtype" placeholder="перечисляем через запятую числа соответствующие времени пример: 0,1,2,3,4,7,9">
+<span class="form__btn addRegRab">Добавить тип</span>
+</section>
+</section>

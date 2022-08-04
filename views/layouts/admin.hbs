@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta name="viewport" content="width=device-width,initial-scale=1.0">
+		<title>{{title}}</title>
+		<link rel="icon" href="/favicon.ico" type="image/x-icon">
+       <link rel="stylesheet" type="text/css" href="/style/style.css"/>
+	   {{!-- для форматирования даты --}}
+	   <script src="/scripts/luxon.min.js"></script>
+       <script src="/scripts/adminscript.js"></script>
+	   <script src="/tinymce/tinymce.min.js"></script>
+	   {{!-- для datepicker --}}
+	   <link rel="stylesheet" type="text/css" href="/datepicker/datepicker.min.css"/>
+       <script src="/datepicker/datepicker.min.js"></script>
+	   
+	   <script>
+      tinymce.init({
+
+        selector: '#mytextarea',
+		language: 'ru',
+		menubar: false,
+		 plugins: ['lists','code'],
+  toolbar: ' fontsize forecolor italic bold |numlist bullist| aligncenter alignjustify alignleft alignnone alignright | code | pastetext ',
+  
+     	  } );
+		  //если несколько текстареа с разными настройками добавляем для каждого:
+	// tinymce.init({
+    //  selector: '#mytextarea2',
+	//	language: 'ru',
+	//	menubar: true,
+	//	 plugins: 'lists',
+  //toolbar: ' fontsize forecolor italic bold |numlist bullist| aligncenter alignjustify alignleft alignnone alignright | pastetext',
+  //   	  } ); 
+    </script>
+	</head>
+	<body class="grid">
+		
+		<main class="main grid">
+			{{{body}}}
+		</main>
+		<section class="tooltip">
+			Подсказка
+		</section>
+		<section class="wrapmodal grid">
+<section class="modal grid">
+	<span id="closeeditnews" class="modal__close"></span>
+	<input type="hidden" class="idnews"/>	
+	<textarea id="mytextarea" class="textnews" cols="30" rows="10"></textarea>
+<div class="form__btn form__btn-savenews">Сохранить изменения</div>
+	
+	</section>
+	</section>
+		
+	</body>
+</html>

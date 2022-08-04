@@ -1,0 +1,22 @@
+<section class="grafInspection grid">
+   {{#if working}}
+   
+         
+   {{#each arrFreeFinal}}
+<input type="hidden" class="id-time-item" value="{{id}}">
+      
+         <span class="registration-form__choice-time-item registration-form__choice-time-item_enable">
+            {{time}}
+         </span>
+        
+    
+      
+   {{/each}}
+   {{else}}
+   <span class="registration-form__choice-time-item ">
+            Извините, всё занято или мы не работаем в этот день.
+         </span> 
+   {{/if}}
+           
+             
+</section>

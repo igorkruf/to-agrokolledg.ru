@@ -1,0 +1,44 @@
+<h1>Список "Предварительная запись" </h1>
+<a href="/" target="_blank">Перейти к предварительной записи</a>
+<section class="listregistration grid">
+{{#each listRegistrationItems}}
+<section class="listregistration-item grid">
+    <div class="listregistration-item__date">{{getWeekDay date_registration}}</div>
+    <div class="listregistration-item__listitems grid">
+
+{{#each items}}
+<div class="listregistration-item__item grid">
+    <div class="listregistration-item__item-info grid">
+{{getTimeRegistrationFromId timeRegistration}} {{ownerCar}} {{aboutCar}} 
+
+    </div>
+ 
+ <nav class="listregistration-item__item-menu grid">
+        
+        <div class="del">
+              <div class="del__confirm grid">
+              <span class="del__confirm-text" >Уверен?</span>
+              <div class="del__confirm-btns grid"><span class="del__confirm-btn delregistration">Да</span><span class="del__confirm-btn nodelregistration">Нет</span></div> 
+            </div>
+            <input type="hidden" class="idRegistration" value={{_id}}>
+        </div>
+    </nav>
+</div>
+{{/each}}
+    </div>
+    
+    {{!-- <nav class="listnews__item-menu grid">
+        <div class="edit"><input type="hidden" class="idnews" value={{_id}}> </div>
+        <div class="del">
+             
+            <div class="del__confirm grid">
+              <span class="del__confirm-text" >Уверен?</span>
+               <div class="del__confirm-btns grid"><span class="del__confirm-btn delnews">Да</span><span class="del__confirm-btn nodelnews">Нет</span></div> 
+            </div>
+            <input type="hidden" class="idnews" value={{_id}}>
+        </div>
+    </nav> --}}
+</section>
+{{/each}}
+
+</section>

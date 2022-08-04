@@ -1,0 +1,43 @@
+$clrInspection1:#7c513d;
+$clrInspection2:#30383a;
+$clrInspection3:#2d2d2d;
+
+$clrService1:#c38978;
+$clrService2:#4f6c7c;
+$clrWash1:#d6ceca;
+$clrWash2:#84888b;
+
+
+@font-face {
+    font-family: "OpenSans-Bold";
+    src: url("fonts/OpenSans-Bold.woff");
+  }
+  @font-face {
+    font-family: "OpenSans-Regular";
+    src: url("fonts/OpenSans-Regular.woff");
+  }
+  @font-face {
+    font-family: "Roboto-Thin";
+    src: url("fonts/Roboto-Thin.woff");
+  }
+  .grid {
+    display: grid;
+  }
+  @mixin br($rad) {
+    -webkit-border-radius: $rad;
+    -moz-border-radius: $rad;
+    -ms-border-radius: $rad;
+    border-radius: $rad;
+  }
+  //Отмена выделения при двойном клике
+  @mixin ns(){
+    -webkit-user-select: none;
+-moz-user-select: none;
+-ms-user-select: none;
+-o-user-select: none;
+user-select: none; 
+  }
+  //тень блока
+  @mixin box-shadow($x-axis: 0, $y-axis: 1px, $blur: 2px, $color: $clrService2) {
+    box-shadow: $x-axis $y-axis $blur $color;
+  }

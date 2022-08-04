@@ -1,0 +1,66 @@
+<section class="title title__inspection grid">
+    {{!-- <section class="content grid"> --}}
+    
+        <section class="content__inspectiontitle grid">
+            <section class="logo grid">
+                <section class="logo__logo"></section>
+                <section class="logo__name grid">
+<section class="logo__name-up">ГБПОУ СО "Красноуфимский аграрный колледж"</section>
+<section class="logo__name-down">ПУНКТ ТЕХНИЧЕСКОГО ОСМОТРА АВТОМОБИЛЕЙ</section>
+                </section>
+            </section>
+
+      
+
+            <section class="about grid">
+          
+                
+                <section class="about__punkt grid">
+                    <section class="about__punkt-left grid">
+                        
+                        <section class="titlegr">График работы:</section>
+                        <section class="gr grid">
+                            <section class="day">пн-пт:</section><section class="time">c 9:00-17:00 (обед 12:00-13:00)</section> 
+                            <section class="day">сб:</section><section class="time">c 9:00-12:00 (без обеда)</section>
+                            <section class="day vihodnoi">вс:</section><section class="time vihodnoi">выходной</section>                           
+                        </section>
+                    </section>
+                    <section class="about__punkt-right grid">
+                        <section class="adress">г.Красноуфимск ул.Варгина 8<span style="position:relative; top:-10px; font-size 12px;">а</span></section>
+                        <section class="tel">8(34394)7-57-61, 952-139-48-44</section>
+                           {{!-- <a href="/registration"> --}}
+                           {{#if registrationed}}
+                           <section class="zapis">{{{message}}}</section>
+                           {{else}}
+                           <section class="zapis">предварительная запись</section>
+                           {{/if}}
+                           {{!-- </a> --}}
+                    </section>
+                    
+                </section>
+            </section>
+        </section>
+
+    {{!-- </section> --}}
+</section>
+<section class="wrapcontent grid">
+   
+    <section class="content grid">
+         {{#if main}}
+        <section class="content__inspectionservices grid">
+            {{>services}}
+        </section>
+        <section class="content__inspectionnecessary">
+            {{>necessary}}
+        </section>
+        {{>gallery}}
+        <section class="content__inspectioninstrahovaya">
+    <img src="img/strahovaya.png" alt="" class="strahovaya_logo">
+  </section>
+{{/if}}
+{{!-- Если клиент нажал кнопку предварительная запись --}}
+{{#if registration}}
+{{>registration/registration}}
+{{/if}}
+    </section>
+</section>

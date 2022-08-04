@@ -1,0 +1,578 @@
+@import "_global.vars.scss";
+@import "_adminstyle.scss";
+* ,*:before, *:after{
+    box-sizing: border-box;
+    font-family: "OpenSans-Regular";
+    @include ns();
+  }
+  body{
+    margin:0px;
+    
+  }
+  figure{
+    margin:0px;
+  }
+  //Общие стили форм...
+  input {
+    outline:none;
+    padding:10px 20px;
+    border:1px solid $clrService2;
+    @include br(5px);
+
+  }//Убираем обвотку вокруг 
+  .form__input{
+    @include br(5px);
+    // border:1px solid $verydark;
+  }
+  a{text-decoration: none}
+  .form__btn{
+    @include br(5px);
+    // background-color: $verydark;
+    color:#fff;
+    cursor: pointer;
+    text-align: center;
+    &:active{
+      background-color:#363e5ac4 ;
+    }
+
+  }
+//форма ввода пароля администратора
+.formlogin{
+  width:100vw;
+  height: 100vh;
+  padding:20px;
+  grid-template-columns: 300px;
+  justify-content: center;
+  align-content: center;
+  grid-row-gap: 20px;
+  // border:1px solid red;
+}
+//Стили разделов общие
+.wrapcontent{
+justify-items: center;
+
+}
+.content{
+  padding:50px 10px;
+width:100%;
+max-width: 1000px;
+min-height: calc(100vh - 600px);
+// border:1px solid red;
+grid-row-gap: 40px;
+}
+.content__inspectioninsurance{
+  // border:1px solid red;
+  
+}
+.content__inspectioninstrahovaya{
+ 
+width: 100%;
+height:auto;
+}
+
+.logo{
+  grid-template-columns: 100px 1fr;
+ //border:1px solid red;
+  background-color: #ffffffab;
+  grid-column-gap: 20px;
+  @include br(5px);
+}
+.about{
+  // border:1px solid red;
+  background-color: #ffffffab;
+  padding:20px;
+  @include br(5px);
+ }
+ .about__punkt{
+  grid-template-columns: repeat(2, auto);
+  justify-content:space-between ;
+  
+
+ }
+ .adress{
+  position:relative;
+cursor:pointer;
+&::before{
+position:absolute;
+left:-30px;
+content: '';
+background: url("../img/adr.png") no-repeat center/contain;
+width: 20px;
+height:20px;
+}
+
+ }
+ .tel{
+  position:relative;
+  &::before{
+  position:absolute;
+  left:-30px;
+  content: '';
+  background: url("../img/tel.png") no-repeat center/contain;
+  width: 20px;
+  height:20px;
+  }
+ }
+ .zapis{
+  // border:1px solid red;
+  
+  @include br(5px);
+  padding:10px;
+  background-color: $clrService2;
+  color:#fff;
+  text-align: center;
+  cursor:pointer;
+  &:active{
+    background-color:$clrWash2 ;
+  }
+ }
+.logo__logo{
+  padding:10px;
+  //border:1px solid red;
+  background: url("../img/logo.png") center/cover no-repeat content-box;
+}
+.logo__name{
+  
+  //border:1px solid green;
+  color:$clrInspection3;
+  grid-template-rows: repeat(2,auto);
+  align-content: center;
+  grid-row-gap: 10px;
+  
+}
+.logo__name-up{
+  position:relative;
+  font-size: 18px;
+  &::after{
+    position:absolute;
+    content:'';
+    bottom: -5px;
+    left:0px;
+    width:70%;
+    height:1px;
+    background-color:$clrInspection3 ;
+  }
+}
+.logo__name-down{
+  font-size: 24px;
+  text-shadow: $clrWash1 1px 1px;
+}
+.strahovaya_logo{
+  width:100%;
+  height:100%;
+  object-fit: cover;
+}
+.title{
+  // border: 1px solid green;
+}
+.logo{
+  cursor: pointer;
+}
+.title__inspection{
+
+  height: 35vw;
+  background: url("../img/panorama/all.jpg") center/cover no-repeat ;
+  //background-size: cover;
+  padding:20px;
+  //background-color: $clrInspection1;
+   //justify-items: center;
+}
+//полупрозрачная область на панораме с боксами
+.content__inspectiontitle{
+  grid-template-rows: 100px minmax(min-content, max-content);
+  height: 100%;
+  align-content:space-between
+  // height:25wv;
+  
+  // background: url("../img/panorama/to_panorama.png") no-repeat ;
+  // background-size: cover;
+  //background-color: aqua;
+}
+.about__punkt-left{
+  
+  grid-template-rows: repeat(3, auto);
+  padding-left: 30px;
+}
+.gr{
+  grid-template-columns: auto 1fr;
+  grid-column-gap: 10px;
+  grid-row-gap: 5px;
+  padding-left: 10px;
+}
+.about__punkt-right{
+  padding-left: 30px;
+  grid-row-gap: 10px;
+  
+}
+.titlegr{
+  position:relative;
+  &::before{
+    position:absolute;
+    left:-30px;
+    content: '';
+    background: url("../img/clock.png") no-repeat center/contain;
+    width: 25px;
+    height:25px;
+    }
+ }
+ .vihodnoi{
+  color:$clrService2;
+ }
+.title__service{
+  height: 25wv;
+  background-color: $clrService1;
+  justify-items: center;
+}
+.content__servicetitle{
+  height:320px;
+  background: url("../img/panorama/avtoservice_panorama.png") no-repeat ;
+  //background-color: aqua;
+}
+.title__wash{
+  height: 320px;
+  background-color: $clrWash1;
+  justify-items: center;
+}
+.content__washtitle{
+  height:320px;
+  background: url("../img/panorama/avtomoika_panorama.png") no-repeat ;
+  //background-color: aqua;
+}
+//Галлерея
+.gallery{
+  
+  grid-template-columns: repeat(6, 1fr);
+    grid-template-rows: repeat(11, 10vw);
+    grid-gap: 10px;
+    // justify-items: center;
+}
+.gallery__item{
+  width:auto;
+  height:100%;
+//  margin:0px;
+}
+// .gallery__img {
+//   width: 100%;
+//   height: 100%;
+//   object-fit: cover;
+  
+// }
+// .gallery__item--2 {
+//   grid-column-start: 1;
+//   grid-column-end: 5;
+//   grid-row-start: 1;
+//   grid-row-end: 3;
+// }
+.gallery__item--3 {
+  grid-column-start: 5;
+  grid-column-end: 7;
+  grid-row-start: 7;
+  grid-row-end: 8;
+  background: url("../img/gallery/3.jpg") center/cover ;
+  
+}
+.gallery__item--4 {
+  grid-column-start: 3;
+  grid-column-end: 5;
+  grid-row-start: 7;
+  grid-row-end: 8;
+  background: url("../img/gallery/4.jpg") center/cover ;
+  
+}
+.gallery__item--5 {
+  grid-column-start: 4;
+  grid-column-end: 7;
+  grid-row-start: 10;
+  grid-row-end: 12;
+  background: url("../img/gallery/5.jpg") center/cover ;
+  
+}
+.gallery__item--6 {
+  grid-column-start: 1;
+  grid-column-end: 3;
+  grid-row-start: 6;
+  grid-row-end: 8;
+  background: url("../img/gallery/6.jpg") center/cover ;
+  
+}
+.gallery__item--7 {
+  grid-column-start: 1;
+  grid-column-end: 4;
+  grid-row-start: 8;
+  grid-row-end: 10;
+  background: url("../img/gallery/7.jpg") center/cover ;
+  
+}
+.gallery__item--8 {
+  grid-column-start: 4;
+  grid-column-end: 7;
+  grid-row-start: 8;
+  grid-row-end: 10;
+  background: url("../img/gallery/8.jpg") center/cover ;
+  
+}
+.gallery__item--9 {
+  grid-column-start: 1;
+  grid-column-end: 4;
+  grid-row-start: 10;
+  grid-row-end: 12;
+  background: url("../img/gallery/9.jpg") center/cover ;
+  }
+.gallery__item--10 {
+  grid-column-start: 1;
+  grid-column-end: 3;
+  grid-row-start: 3;
+  grid-row-end: 6;
+  background: url("../img/gallery/10.jpg") center/cover ;
+  
+}
+.gallery__item--11 {
+  grid-column-start: 1;
+  grid-column-end: 7;
+  grid-row-start: 1;
+  grid-row-end: 3;
+  background: url("../img/gallery/11.jpg") center/cover ;
+  
+}
+.gallery__item--12 {
+  grid-column-start: 3;
+  grid-column-end: 7;
+  grid-row-start: 3;
+  grid-row-end: 5;
+  background: url("../img/gallery/12.jpg") center/cover ;
+  
+}
+.gallery__item--13 {
+  grid-column-start: 3;
+  grid-column-end: 7;
+  grid-row-start: 5;
+  grid-row-end: 7;
+  background: url("../img/gallery/13.jpg") center/cover ;
+  
+}
+//Модальное окно
+.itemsListNews{
+  padding:20px;
+  
+
+}
+
+//Форма предварительной записи(регистрации)
+.registration-form{
+  grid-row-gap: 10px;
+  padding:20px;
+  @include br(5px);
+border:1px solid $clrService2;  
+
+}
+
+.formateddate{
+align-items: center;
+justify-items: center;
+  color:$clrService2;
+  font-size: 18px;
+}
+.registration-form__choice-date{
+  grid-column-gap: 20px;
+  grid-template-columns: repeat(auto-fit,minmax(300px, 1fr));
+}
+.registration-form__choice-time{
+   
+  grid-column-gap: 10px;
+  grid-template-columns: repeat(auto-fit, minmax(50px, 1fr));
+}
+.registration-form__choice-time-item{
+  text-align: center;
+  color:#fff;
+  pointer-events: none;
+  background:rgba($clrService2, 1) !important ;
+  @include br(5px);
+  padding:20px;
+  
+}
+.registration-form__choice-time-item_enable{
+  color:$clrService2;
+  cursor: pointer;
+  pointer-events: auto;
+  background:rgba($clrService2, 0.2) !important ;
+}
+.registration-form__feedback{
+  
+  grid-column-gap: 20px;
+  
+  grid-template-columns: repeat(auto-fit,minmax(300px, 1fr));
+}
+.registration-form__fio-car{
+  grid-row-gap: 10px;
+}
+.registration-form__button{
+  pointer-events: auto;
+  background:rgba($clrService2, 1) ;
+
+}
+
+.registration-form__button_disable{
+  //Заблокировать события мыши
+  pointer-events: none;
+  background:rgba($clrService2, 0.2) ;
+ 
+}
+.input__fio_error{
+  border-color: red;
+}
+//Список услуг Пункта Тех Осмотра
+.list-category-to{
+  grid-gap: 20px;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  // border:1px solid red;
+}
+.list-category-to-item{
+  background-color: #fff;
+  @include box-shadow(5px, 5px, 20px, rgba($clrService2, 0.3));
+  @include br(5px);
+  // border: 3px solid $clrService2;
+  padding:20px;
+  justify-items: center;
+}
+.list-category-to-item__img{
+  width: 70%;
+  height: 150px;
+  
+
+}
+.list-category-to-item__img-M1{
+  
+  background: url(/img/services/to/m1.png) center/contain no-repeat content-box;
+}
+.list-category-to-item__img-N1{
+  
+  background: url(/img/services/to/n1.png) center/contain no-repeat content-box;
+}
+.list-category-to-item__img-O1{
+  
+  background: url(/img/services/to/o1.png) center/contain no-repeat content-box;
+}
+.list-category-to-item__img-O2{
+  
+  background: url(/img/services/to/o2.png) center/contain no-repeat content-box;
+}
+.list-category-to-item__img-L{
+  
+  background: url(/img/services/to/l.png) center/contain no-repeat content-box;
+}
+
+.list-category-to-item__img- {
+  
+  background: url(/img/services/to/spec.png) center/contain no-repeat content-box;
+}
+.list-category-to-item__about{
+  text-align: justify;
+}
+.list-category-to-item__about-name{
+  color: $clrService2 ;
+  font-size: 22px;
+}
+.list-category-to-item__about-detail{
+  font-size: 14px;
+}
+.list-category-to-item__price{
+  position: relative;
+  color:$clrService2;
+  font-size: 22px;
+  &::after{
+    position:absolute;
+    content:'руб.';
+    right:-40px;
+    top:5px;
+    font-size:16px;
+
+
+  }
+}
+.title-registration{
+  justify-items: end;
+}
+.to-main-page{
+  position:relative;
+  color:$clrService2;
+  cursor:pointer;
+  // &::after{
+  //   position:absolute;
+  //   content:'';
+  //   width: 100%;
+  //   left:0px;
+  //   height:1px;
+  //   bottom: -5px;
+  //   background-color: $clrService2 ;
+  // }
+}
+.list-necessary{
+  position:relative;
+  padding-left: 90px;
+  
+  &::after{
+    position:absolute;
+    content:'';
+    top:0;
+    left:10px;
+    height:100%;
+    width: 50px;
+    background: url(../img/attention.png) center/contain no-repeat content-box;;
+  }
+}
+.footer{
+  padding:20px;
+ color:#fff; 
+ grid-template-columns: auto;
+ justify-items: center;
+ align-items: center;
+background-color: $clrInspection2;
+
+a{
+    color:#fff;
+    text-decoration: none;
+  }
+  
+}
+
+@media only screen and (max-width: 900px) {
+  .logo__name-up {font-size: 10px;}
+.logo__name-down{font-size: 14px;}
+.title__inspection{
+
+  height: auto;
+  background: none;
+  //background-size: cover;
+  padding:20px;
+  //background-color: $clrInspection1;
+   //justify-items: center;
+}
+.about__punkt{
+  grid-template-columns: 1fr;
+  grid-row-gap: 20px;
+}
+.about{
+  background-color: rgba($clrInspection2, 0.15);
+}
+.title__inspection{
+  padding:10px;
+}
+}
+@media only screen and (max-width: 600px) {
+  .logo__name-up {font-size: 8px;}
+.logo__name-down{font-size: 12px;}
+.about__punkt-left{
+font-size: 14px;
+}
+.title__inspection{
+  padding:10px;
+}
+.about__punkt-right{
+  font-size: 14px;
+  }
+  .gallery{
+  
+         grid-gap: 2px;
+      // justify-items: center;
+  }
+ }
